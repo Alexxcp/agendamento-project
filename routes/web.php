@@ -48,3 +48,15 @@ Route::group(['middleware' => 'auth', 'prefix' => 'medicos'], function () {
     Route::put('{id}', 'MedicoController@update');
     Route::delete('{id}', 'MedicoController@destroy');
 });
+
+//AGENDAMENTO
+
+Route::group(['middleware' => 'auth', 'prefix' => 'agendamentos'], function () {
+    Route::get('/', 'AgendamentoController@index');
+    Route::get('/add', 'AgendamentoController@create');
+    Route::post('/', 'AgendamentoController@store');
+    Route::get('{id}', 'AgendamentoController@show');
+    Route::get('/edit/{id}', 'AgendamentoController@edit');
+    Route::put('{id}', 'AgendamentoController@update');
+    Route::delete('{id}', 'AgendamentoController@destroy');
+});

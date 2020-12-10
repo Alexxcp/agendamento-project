@@ -18,7 +18,7 @@
 @section('javascript')
 <script type="text/javascript">
 function validate_delete() {
-    return confirm('Excluir o médico atual? Essa ação não pode ser desfeita.');
+    return confirm('Excluir o paciente atual? Essa ação não pode ser desfeita.');
 }
 </script>
 @endsection
@@ -29,7 +29,7 @@ function validate_delete() {
         <div class="col-md-12">
             <div class="card">
                 <div class="card-header">Médico</div>
-                <form action="{{ url('medicos/'.$data->id) }}" method="post" onsubmit="return validate_delete()">
+                <form action="{{ url('agendamentos/'.$data->id) }}" method="post" onsubmit="return validate_delete()">
                     <div class="card-body">
                         @method('DELETE')
 
@@ -86,7 +86,7 @@ function validate_delete() {
                     <div class="card-footer text-right">
                         <a href="#" onclick="history.back()" class="btn btn-secondary">Voltar</a>
                         <button type="submit" class="btn btn-danger">Excluir</button>
-                        <a href="{{ url('medicos/edit/'.$data->id) }}" class="btn btn-primary">Editar</a>
+                        <a href="{{ url('agendamentos/edit/'.$data->id) }}" class="btn btn-primary">Editar</a>
                     </div>
                 </form>
             </div>

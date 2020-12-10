@@ -50,6 +50,10 @@
                             <a class="nav-link" href="{{ url('medicos') }}">Médicos <span
                                     class="sr-only">(current)</span></a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ url('agendamentos') }}">Agendamentos <span
+                                    class="sr-only">(current)</span></a>
+                        </li>
                         @endguest
                     </ul>
 
