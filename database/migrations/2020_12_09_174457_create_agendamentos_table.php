@@ -15,8 +15,8 @@ class CreateAgendamentosTable extends Migration
     {
         Schema::create('agendamentos', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('id_paciente')->unsigned()->nullable();
-            $table->integer('id_medico')->unsigned()->nullable();
+            $table->unsignedinteger('id_paciente')->unsigned()->nullable();
+            $table->unsignedinteger('id_medico')->unsigned()->nullable();
             $table->string('descricao');
             $table->datetime('datahora');
             $table->foreign('id_paciente')->references('id')->on('pacientes');
